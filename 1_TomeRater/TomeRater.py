@@ -209,7 +209,7 @@ class TomeRater(object):
 
     def get_n_most_expensive_books(self, n):
         prices = sorted([book.price for book in list(self.books.keys()) if book.price is not None])
-        gmost_expensive_list = []
+        most_expensive_list = []
         for book in list(self.books.keys()):
             if (book.price is not None) and (book.price >= prices[-n:][0]):
                 most_expensive_list.append(book)
